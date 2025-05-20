@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me - Chidiadi Henry Egbule</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    /* Header */
+    header {
+      background-color: #ffffff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e0e0e0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header .left {
+      display: flex;
+      align-items: center;
+    }
+    header .left img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    header nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+    }
+    header .right a {
+      margin-left: 10px;
+      color: #333;
+    }
+/* Hamburger Button */
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    /* Mobile Navigation */
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background-color: #fff;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      width: 200px;
+      border: 1px solid #ddd;
+      padding: 10px;
+      z-index: 1001;
+    }
+
+    .mobile-nav a {
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .mobile-nav a:last-child {
+      border-bottom: none;
+    }
+
+    .mobile-nav.show {
+      display: flex;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header nav,
+      header .right {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
+
+    /* About Me Section */
+    .about-section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 20px;
+      text-align: center;
+    }
+    .about-section h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    .about-section p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    
+
+    /* Footer */
+    footer {
+      background-color: #f5f5f5;
+      padding: 30px 20px;
+      margin-top: 60px;
+    }
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+    }
+    footer h3 {
+      margin-bottom: 15px;
+      font-size: 18px;
+      color: #333;
+    }
+    footer ul {
+      list-style: none;
+      padding: 0;
+    }
+    footer ul li {
+      margin-bottom: 10px;
+    }
+    footer a {
+      text-decoration: none;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="left">
+    <img src="IMG_0012.JPG" alt="Profile Picture" />
+    <span>Chidiadi Henry Egbule</span>
+  </div>
+
+  <!-- Hamburger Icon -->
+  <button class="hamburger" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <!-- Desktop Navigation -->
+  <nav class="center">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="message.html">Message Me</a>
+  </nav>
+
+  <!-- Desktop Social Icons -->
+  <div class="right">
+    <a href="https://web.facebook.com/egbule.henry.5" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://x.com/egbulehenry" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.instagram.com/egbule_chidiadi/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://github.com/Egbulehenry" target="_blank"><i class="fab fa-github"></i></a>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="message.html">Message Me</a>
+    <a href="https://web.facebook.com/egbule.henry.5" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+    <a href="https://x.com/egbulehenry" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+    <a href="https://www.instagram.com/egbule_chidiadi/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="https://github.com/Egbulehenry" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+  </div>
+</header>
+
+<!-- About Section -->
+<section class="about-section">
+  <h1>About Me</h1>
+  <p>
+    I am Chidiadi Henry Egbule a <strong>Frontend Developer And A Structural Engineer</strong>, as a Frontend developer, builder of the internet. I take designs and ideas and turn them into functional websites and web applications.  I write the code that makes a website work and look good. 
+
+Proficient in using HTML, CSS, JavaScript, and other programming languages to create the structure, style, and interactivity of websites.<br><br>
+
+And as a <strong> Structural Engineer </strong>role is to design and supervise projects. 
+I have gained valuable experience working with construction companies and certified engineers. I will do professional civil and structural engineering analysis and design services. Safety is the most important thing when it comes to civil engineering projects and the structural design of structures.
+
+I am excited to work with you to turn your ideas into safe and strong buildings. My goal is to ensure your project meets all your needs and expectations.
+  </p>
+</section>
+
+<!-- Technical Skills Section -->
+<section style="padding: 60px 20px; background-color: #f9f9f9;">
+  <div style="max-width: 1000px; margin: auto; background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+    <h2 style="margin-bottom: 25px; font-size: 24px; color: #111;">Technical Skills</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 15px;">
+      <!-- Web Development Skills -->
+      <div style="flex: 1 1 200px; background-color: #eef0ff; padding: 10px 15px; border-radius: 8px; display: flex; align-items: center;">
+        <i class="fas fa-check-circle" style="color: #5c4dff; margin-right: 8px;"></i> HTML
+      </div>
+      <div style="flex: 1 1 200px; background-color: #eef0ff; padding: 10px 15px; border-radius: 8px; display: flex; align-items: center;">
+        <i class="fas fa-check-circle" style="color: #5c4dff; margin-right: 8px;"></i> CSS
+      </div>
+      <div style="flex: 1 1 200px; background-color: #eef0ff; padding: 10px 15px; border-radius: 8px; display: flex; align-items: center;">
+        <i class="fas fa-check-circle" style="color: #5c4dff; margin-right: 8px;"></i> JavaScript 
+      </div>
+      <div style="flex: 1 1 200px; background-color: #eef0ff; padding: 10px 15px; border-radius: 8px; display: flex; align-items: center;">
+        <i class="fas fa-check-circle" style="color: #5c4dff; margin-right: 8px;"></i> Bootstrap 
+      </div>
+      <div style="flex: 1 1 200px; background-color: #eef0ff; padding: 10px 15px; border-radius: 8px; display: flex; align-items: center;">
+        <i class="fas fa-check-circle" style="color: #5c4dff; margin-right: 8px;"></i> Tailwind CSS
+      </div>
+      <div style="flex: 1 1 200px; background-color: #eef0ff; padding: 10px 15px; border-radius: 8px; display: flex; align-items: center;">
+        <i class="fas fa-check-circle" style="color: #5c4dff; margin-right: 8px;"></i> Git & GitHub
+      </div>
+      <div style="flex: 1 1 200px; background-color: #eef0ff; padding: 10px 15px; border-radius: 8px; display: flex; align-items: center;">
+        <i class="fas fa-check-circle" style="color: #5c4dff; margin-right: 8px;"></i> Version Control
+      </div>
+
+      <!-- Structural Engineering Skills -->
+      <div style="flex: 1 1 200px; background-color: #eef0ff; padding: 10px 15px; border-radius: 8px; display: flex; align-items: center;">
+        <i class="fas fa-check-circle" style="color: #5c4dff; margin-right: 8px;"></i> AutoCAD
+      </div>
+      <div style="flex: 1 1 200px; background-color: #eef0ff; padding: 10px 15px; border-radius: 8px; display: flex; align-items: center;">
+        <i class="fas fa-check-circle" style="color: #5c4dff; margin-right: 8px;"></i> STAAD.Pro
+      </div>
+      <div style="flex: 1 1 200px; background-color: #eef0ff; padding: 10px 15px; border-radius: 8px; display: flex; align-items: center;">
+        <i class="fas fa-check-circle" style="color: #5c4dff; margin-right: 8px;"></i> Structural Analysis
+      </div>
+      <div style="flex: 1 1 200px; background-color: #eef0ff; padding: 10px 15px; border-radius: 8px; display: flex; align-items: center;">
+        <i class="fas fa-check-circle" style="color: #5c4dff; margin-right: 8px;"></i> Orion
+      </div>
+      <div style="flex: 1 1 200px; background-color: #eef0ff; padding: 10px 15px; border-radius: 8px; display: flex; align-items: center;">
+        <i class="fas fa-check-circle" style="color: #5c4dff; margin-right: 8px;"></i> Structural Design Codes
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio Section -->
+<section style="padding: 60px 20px; background-color: #f3e8ff;">
+  <div style="max-width: 1200px; margin: auto;">
+    <h2 style="font-size: 24px; margin-bottom: 30px; color: #111;">My Projects / Portfolio</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+
+      <!-- Card 1: Coffee Webpage -->
+      <div style="background-color: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <img src="images/coffee Capture.PNG" alt="Coffee Webpage" style="width: 100%; height: 200px; object-fit: cover;">
+        <div style="padding: 20px;">
+          <h3>Coffee Webpage</h3>
+          <div style="margin: 10px 0;">
+            <span class="badge">HTML</span> <span class="badge">CSS</span><span class="badge">JAVASCRIPT</span>
+          </div>
+          <p>A beautiful landing page for a coffee brand with elegant layout and styling.</p>
+          <a href="https://coffee-borcelle-site.vercel.app/#" target="_blank" style="color: #5c4dff;">View Project</a>
+        </div>
+      </div>
+
+      <!-- Card 2: DITS Academy Login -->
+      <div style="background-color: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <img src="images/dits Capture.PNG" alt="DITS Academy Login" style="width: 100%; height: 180px; object-fit: cover;">
+        <div style="padding: 20px;">
+          <h3>DITS Academy Login</h3>
+          <div style="margin: 10px 0;">
+            <span class="badge">HTML</span> <span class="badge">CSS</span>
+          </div>
+          <p>Login and sign-up page interface design for DITS Academy users.</p>
+          <a href="https://your-link-to-dits-login.com" target="_blank" style="color: #5c4dff;">View Project</a>
+        </div>
+      </div>
+
+      <!-- Card 3: Netflix Login -->
+      <div style="background-color: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <img src="images/netflix Capture.PNG" alt="Netflix Login" style="width: 100%; height: 180px; object-fit: cover;">
+        <div style="padding: 20px;">
+          <h3>Netflix Login</h3>
+          <div style="margin: 10px 0;">
+            <span class="badge">HTML</span> <span class="badge">CSS</span>
+          </div>
+          <p>A clone of Netflix login UI using pure HTML and CSS.</p>
+          <a href="https://your-link-to-netflix-login.com" target="_blank" style="color: #5c4dff;">View Project</a>
+        </div>
+      </div>
+
+      <!-- Card 4: Etche Skilled Workers -->
+      <div style="background-color: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <img src="images/etche Capture.PNG" alt="Etche Skilled Workers" style="width: 100%; height: 180px; object-fit: cover;">
+        <div style="padding: 20px;">
+          <h3>Etche Skilled Workers</h3>
+          <div style="margin: 10px 0;">
+            <span class="badge">HTML</span> <span class="badge">CSS</span> <span class="badge">JavaScript</span>
+          </div>
+          <p>A community project site to register and promote skilled artisans in Etche.</p>
+          <a href="https://your-link-to-etche-skilled.com" target="_blank" style="color: #5c4dff;">View Project</a>
+        </div>
+      </div>
+
+      <!-- Card 5: Weather App -->
+      <div style="background-color: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <img src="images/weather Capture.PNG" alt="Weather App" style="width: 100%; height: 180px; object-fit: cover;">
+        <div style="padding: 20px;">
+          <h3>Weather App</h3>
+          <div style="margin: 10px 0;">
+            <span class="badge">HTML</span> <span class="badge">CSS</span> <span class="badge">JavaScript</span>
+          </div>
+          <p>Live weather forecast web app using API to fetch real-time data.</p>
+          <a href="https://your-link-to-weather-app.com" target="_blank" style="color: #5c4dff;">View Project</a>
+        </div>
+      </div>
+
+      <!-- Card 6: Foodieland Webpage -->
+      <div style="background-color: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <img src="images/foodieland Capture.PNG" alt="Foodieland Webpage" style="width: 100%; height: 200px; object-fit: cover;">
+        <div style="padding: 20px;">
+          <h3>Foodieland Webpage</h3>
+          <div style="margin: 10px 0;">
+            <span class="badge">HTML</span> <span class="badge">CSS</span>
+          </div>
+          <p>A stylish landing page for a food-related brand.</p>
+          <a href="https://your-link-to-foodieland.com" target="_blank" style="color: #5c4dff;">View Project</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Badge styling -->
+<style>
+  .badge {
+    display: inline-block;
+    background-color: #ede9fe;
+    color: #5c4dff;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 8px;
+    margin-right: 5px;
+  }
+</style>
+
+
+<!-- Coming Soon Projects -->
+<section style="padding: 60px 20px; background-color: #fdf4ff;">
+  <div style="max-width: 1200px; margin: auto;">
+    <h2 style="font-size: 24px; margin-bottom: 30px; color: #111;">Coming Soon</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+
+      <!-- Coming Soon Card 1 -->
+      <div style="background-color: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <img src="coming soon.jpg" alt="Coming Soon Project 1" style="width: 100%; height: 180px; object-fit: cover;">
+        <div style="padding: 20px;">
+          <h3>Online Portfolio Builder</h3>
+          <div style="margin: 10px 0;">
+            <span class="badge">HTML</span> <span class="badge">CSS</span> <span class="badge">JavaScript</span>
+          </div>
+          <p>A dynamic portfolio website builder to help users showcase their skills and projects.</p>
+        </div>
+      </div>
+
+      <!-- Coming Soon Card 2 -->
+      <div style="background-color: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <img src="coming soon.jpg" alt="Coming Soon Project 2" style="width: 100%; height: 180px; object-fit: cover;">
+        <div style="padding: 20px;">
+          <h3>Construction Calculator Tool</h3>
+          <div style="margin: 10px 0;">
+            <span class="badge">HTML</span> <span class="badge">Tailwind CSS</span> <span class="badge">JS</span>
+          </div>
+          <p>Helps engineers and builders calculate materials for various structural projects.</p>
+        </div>
+      </div>
+
+      <!-- Coming Soon Card 3 -->
+      <div style="background-color: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <img src="coming soon.jpg" alt="Coming Soon Project 3" style="width: 100%; height: 180px; object-fit: cover;">
+        <div style="padding: 20px;">
+          <h3>Etche Community Portal</h3>
+          <div style="margin: 10px 0;">
+            <span class="badge">HTML</span> <span class="badge">CSS</span> <span class="badge">React</span>
+          </div>
+          <p>An upcoming portal for Etche locals to share updates, events, and connect easily.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Structural Engineer Projects -->
+<section style="padding: 60px 20px; background-color: #eef6f9;">
+  <div style="max-width: 1200px; margin: auto;">
+    <h2 style="font-size: 24px; margin-bottom: 30px; color: #111;">Structural Engineering Project</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+
+      <!-- Card 1: Proposed Three Story Building -->
+      <div style="background-color: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <img src="images/orion Capture.PNG" alt="Proposed Three Story Building" style="width: 100%; height: 250px; object-fit: cover;">
+        <div style="padding: 20px;">
+          <h3>Proposed Three Story Building</h3>
+          <div style="margin: 10px 0;">
+            <span class="badge">AutoCAD</span> <span class="badge">Orion</span>
+          </div>
+          <p><strong>AutoCAD:</strong> Used to panel structural drawings and detailing.<br>
+             <strong>Orion:</strong> For structural design, analysis, and calculation sheets.</p>
+        </div>
+      </div>
+
+      <!-- Card 2: Proposed Five Story Building -->
+      <div style="background-color: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <img src="images/auto Capture.PNG" alt="Proposed Five Story Building" style="width: 100%; height: 180px; object-fit: cover;">
+        <div style="padding: 20px;">
+          <h3>Proposed Five Story Building</h3>
+          <div style="margin: 10px 0;">
+            <span class="badge">AutoCAD</span> <span class="badge">Orion</span>
+          </div>
+          <p><strong>AutoCAD:</strong> Used to panel structural drawings and detailing.<br>
+             <strong>Orion:</strong> For structural design, analysis, and calculation sheets.</p>
+        </div>
+      </div>
+
+      <!-- Card 3: Supervising Structural Work on Site -->
+      <div style="background-color: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        <img src="images/super.jpg" alt="Supervising Structural Work on Site" style="width: 100%; height: 300px; object-fit: cover;">
+        <div style="padding: 20px;">
+          <h3>Supervising Structural Work on Site</h3>
+          <div style="margin: 10px 0;">
+            <span class="badge">Inspection Tools, PPE</span> <span class="badge">Project Management</span> 
+          </div>
+          <p><strong>Inspection Tools:</strong> Devices and checklists to ensure construction quality and safety.<br>
+             <strong>Project Management:</strong> Software and practices for overseeing project timelines and resources.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div>
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="message.html">Message Me</a></li>
+      </ul>
+    </div>
+    <div style="text-align: right;">
+      <h3>Follow Me</h3>
+      <a href="https://web.facebook.com/egbule.henry.5" target="_blank"><i class="fab fa-facebook fa-lg"></i></a>
+      <a href="https://x.com/egbulehenry" target="_blank"><i class="fab fa-twitter fa-lg"></i></a>
+      <a href="https://www.instagram.com/egbule_chidiadi/" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+      <a href="https://github.com/Egbulehenry" target="_blank"><i class="fab fa-github fa-lg"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- JavaScript -->
+<script>
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('show');
+  }
+</script>
+
+</body>
+</html>

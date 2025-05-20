@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Message Me - Chidiadi Henry Egbule</title>
+  <head>
+  ...
+  <!-- FIXED: Font Awesome 5.15.4 for hamburger icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Header */
+    header {
+      background-color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header .left {
+      display: flex;
+      align-items: center;
+    }
+
+    header .left img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    header nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    header .right a {
+      margin-left: 10px;
+      color: #333;
+    }
+
+    /* Hamburger Button */
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    /* Mobile Navigation */
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background-color: #fff;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      width: 200px;
+      border: 1px solid #ddd;
+      padding: 10px;
+      z-index: 1001;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .mobile-nav a {
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .mobile-nav a:last-child {
+      border-bottom: none;
+    }
+
+    .mobile-nav.show {
+      display: flex;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header nav,
+      header .right {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
+
+    /* Message Section */
+    .message-container {
+      padding: 60px 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .message-container h1 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .message-container p {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 40px;
+      color: #555;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    input, textarea {
+      padding: 15px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      padding: 12px 20px;
+      background-color: #5c4dff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      width: fit-content;
+      align-self: center;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #f5f5f5;
+      padding: 30px 20px;
+      margin-top: 60px;
+    }
+
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    footer h3 {
+      margin-bottom: 15px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    footer ul li {
+      margin-bottom: 10px;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="left">
+    <img src="IMG_0012.JPG" alt="Profile Picture" />
+    <span>Chidiadi Henry Egbule</span>
+  </div>
+
+   <!-- Hamburger Menu Icon -->
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle Menu">
+    <!-- Inline SVG icon (no Font Awesome needed) -->
+    <svg viewBox="0 0 100 80" width="24" height="24">
+      <rect width="100" height="10"></rect>
+      <rect y="30" width="100" height="10"></rect>
+      <rect y="60" width="100" height="10"></rect>
+    </svg>
+  </button>
+
+  <!-- Desktop Navigation -->
+  <nav class="center">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="message.html">Message Me</a>
+  </nav>
+
+  <!-- Desktop Social Icons -->
+  <div class="right">
+    <a href="https://web.facebook.com/egbule.henry.5" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://x.com/egbulehenry" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.instagram.com/egbule_chidiadi/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://github.com/Egbulehenry" target="_blank"><i class="fab fa-github"></i></a>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="message.html">Message Me</a>
+    <a href="https://web.facebook.com/egbule.henry.5" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+    <a href="https://x.com/egbulehenry" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+    <a href="https://www.instagram.com/egbule_chidiadi/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="https://github.com/Egbulehenry" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+  </div>
+</header>
+
+<!-- Message Section -->
+<section class="message-container">
+  <h1>Message Me</h1>
+  <p>Leave a message for me or send me an email directly at <a href="mailto:Egbulechidiadi@gmail.com">Egbulechidiadi@gmail.com</a>.</p>
+
+  <form action="#" method="post">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div>
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="message.html">Message Me</a></li>
+      </ul>
+    </div>
+    <div style="text-align: right;">
+      <h3>Follow Me</h3>
+      <a href="https://web.facebook.com/egbule.henry.5" target="_blank"><i class="fab fa-facebook fa-lg"></i></a>
+      <a href="https://x.com/egbulehenry" target="_blank"><i class="fab fa-twitter fa-lg"></i></a>
+      <a href="https://www.instagram.com/egbule_chidiadi/" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+      <a href="https://github.com/Egbulehenry" target="_blank"><i class="fab fa-github fa-lg"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- JavaScript -->
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('show');
+  }
+
+  // Close mobile menu when any link is clicked
+  document.querySelectorAll('.mobile-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.remove('show');
+    });
+  });
+</script>
+
+</body>
+</html>
